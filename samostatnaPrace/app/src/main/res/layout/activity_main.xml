@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#eff5f5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2B59C3"
+            android:textColor="#FFEECF"
+            android:padding="12dp"
+            android:textSize="35dp"
+            android:text="Připomínač"
+            android:textAlignment="center"
+            ></TextView>
+
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/kalendar"></CalendarView>
+
+        <TimePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B7C3F3"
+            android:numbersSelectorColor="@color/black"
+            android:headerBackground="#0D1321"
+            android:id="@+id/picker"></TimePicker>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zadejte jméno události: "
+                android:textSize="20dp"
+                android:textColor="@color/black"></TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="např. Narozeniny"
+                android:id="@+id/udalost"></EditText>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zapsat si to!"
+            android:backgroundTint="#D62828"
+            android:onClick="pripomen"
+            ></Button>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="980dp"></ListView>
+    </LinearLayout>
+</ScrollView>
